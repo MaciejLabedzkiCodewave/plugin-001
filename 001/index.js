@@ -1,7 +1,7 @@
 FlotiqPlugins.add(
     {
-      id: 'mycompany.title-tailwind-hide-group',
-      displayName: `Title hide`,
+      id: 'PluginsML.title-tailwind-hide-group',
+      displayName: `Hide title and discover on hover`,
       version: `1.0.0`, 
     },
     function (handler, client) {
