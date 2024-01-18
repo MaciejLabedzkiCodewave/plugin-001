@@ -26,7 +26,7 @@ FlotiqPlugins.add(
                 className: '', 
               },{
                 key: 'flotiq-page-manu-item',
-                icon: undefined,
+                icon: <img src="https://raw.githubusercontent.com/MaciejLabedzkiCodewave/plugin-001/main/images/flotiqBadgeLogo.svg" style="width: 20px;height: 20px;"/>,
                 title: "Flotiq Page",
                 link: "https://flotiq.com/",
                 target: '_blank',
