@@ -9,8 +9,8 @@ FlotiqPlugins.add(
         'flotiq.grid.cell::render',
         ({ contentType, accessor, data }) => {
            
-          if (contentType?.name !== 'blogposts') return null;
-          if (accessor != 'title') return null; 
+            if (contentType?.name !== 'blogposts') { return null };
+            if (accessor != 'title') { return null }; 
 
             // Anchor for validation if Tailwind Hover Group style are added
             const validateAddedStyle = document.querySelector('body').classList.contains("thg-enabled");
@@ -40,6 +40,7 @@ FlotiqPlugins.add(
             divContainer.innerHTML = spanTitle + spanHidePlaceholderTitle;
         
             return divContainer;
+
         },
       );
     },
