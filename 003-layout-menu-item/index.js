@@ -2,7 +2,8 @@ FlotiqPlugins.add(
     {
       id: 'PluginsML.layout-menu-items',
       displayName: `Add menu item`,
-      version: `1.0.2`, 
+      description: "Lorem ipsum",
+      version: `1.0.3`, 
     },
     function (handler) {
       handler.on(
@@ -10,13 +11,15 @@ FlotiqPlugins.add(
         ({ permissions, isRoleAdmin, user,isAdmin }) => {
            
             console.log('Valide input',permissions, isRoleAdmin, user,isAdmin);
-        
-            return {
+
+            const newItem = {
                 key: 'new-menu-item',
                 icon: undefined,
                 title: "New menu item",
                 link: '/',
-              };
+              }
+        
+            return newItem;
         },
       );
     },
