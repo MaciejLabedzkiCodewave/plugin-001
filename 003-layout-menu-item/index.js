@@ -1,9 +1,9 @@
 FlotiqPlugins.add(
     {
-      id: 'PluginsML.layout-menu-items',
+      id: 'PluginsML.layout-sidebar-menu-item',
       displayName: `Add menu item`,
       description: "Lorem ipsum",
-      version: `1.0.3`, 
+      version: `1.0.5`, 
     },
     function (handler) {
       handler.on(
@@ -25,19 +25,25 @@ FlotiqPlugins.add(
                 <rect width="24" height="24" fill="white"/>
                 </clipPath>
                 </defs>
-                </svg>;
-
-            const newItem = {
-                key: 'new-menu-item',
+                </svg>; 
+        
+            return [{
+                key: 'new-menu-item-1',
                 icon: iconExample,
                 title: "New Link",
                 link: '/',
                 target: '_blank',
                 rel: 'noreferrer',
-                className: 'open-space text-red', 
-              }
-        
-            return newItem;
+                className: '', 
+              },{
+                key: 'new-menu-item-2',
+                icon: iconExample,
+                title: "New Link",
+                link: '/',
+                target: '_blank',
+                rel: 'noreferrer',
+                className: '', 
+              }];
         },
       );
     },
