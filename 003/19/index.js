@@ -3,7 +3,7 @@ FlotiqPlugins.add(
     id: 'PluginsML.layout-sidebar-menu-item',
     displayName: `Add menu item`,
     description: "Lorem ipsum",
-    version: `1.0.18`, 
+    version: `1.0.19`, 
   },
   function (handler) {
     handler.on(
