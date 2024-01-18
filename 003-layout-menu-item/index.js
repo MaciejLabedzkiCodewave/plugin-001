@@ -6,7 +6,7 @@ FlotiqPlugins.add(
     },
     function (handler) {
       handler.on(
-        'flotiq.layout.sidebar::add',
+        'flotiq.layout.sidebar-menu-item::add',
         ({ permissions, isRoleAdmin, user,isAdmin }) => {
            
             console.log('Valide input',permissions, isRoleAdmin, user,isAdmin);
