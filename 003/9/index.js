@@ -23,7 +23,7 @@ FlotiqPlugins.add(
               },{
                 key: 'new-menu-item-2',
                 icon:  "♪",
-                title: "New Link",
+                title: "Another Link",
                 link: '/',
                 target: '_blank',
                 rel: 'noreferrer',
