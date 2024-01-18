@@ -6,12 +6,17 @@ FlotiqPlugins.add(
     },
     function (handler) {
       handler.on(
-        'flotiq.layout.sidebar-menu-item::add',
+        'flotiq.layout.sidebar::add',
         ({ permissions, isRoleAdmin, user,isAdmin }) => {
            
             console.log('Valide input',permissions, isRoleAdmin, user,isAdmin);
         
-            return null;
+            return {
+                key: 'new-menu-item',
+                icon: undefined,
+                title: "New menu item",
+                link: '/',
+              };
         },
       );
     },
