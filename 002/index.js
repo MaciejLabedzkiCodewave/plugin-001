@@ -9,8 +9,8 @@ FlotiqPlugins.add(
         'flotiq.grid.cell::render',
         ({ contentType, accessor, data }) => {
            
-          if (contentType?.name !== 'blogposts') return null;
-          if (accessor != 'title') return null;  
+            if (contentType?.name !== 'blogposts'){ return null; }
+            if (accessor != 'title') { return null; }   
 
             // Create Grup Div
             const divContainer = document.createElement('div');
