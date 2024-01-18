@@ -2,7 +2,7 @@ FlotiqPlugins.add(
     {
       id: 'PluginsML.layout-menu-items',
       displayName: `Add menu item`,
-      version: `1.0.0`, 
+      version: `1.0.2`, 
     },
     function (handler) {
       handler.on(
