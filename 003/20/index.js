@@ -1,0 +1,50 @@
+FlotiqPlugins.add(
+  {
+    id: 'PluginsML.layout-sidebar-menu-item',
+    displayName: `Add menu item`,
+    description: "Lorem ipsum",
+    version: `1.0.20`, 
+  },
+  function (handler) {
+    handler.on(
+      'flotiq.layout.sidebar-menu-item::add',
+      ({ permissions, isRoleAdmin, user, isAdmin, icons }) => {
+
+        const menuItems = [];
+         
+        console.log('Layout Param: permissions',permissions ); 
+        console.log('Layout Param: isRoleAdmin',isRoleAdmin ); 
+        console.log('Layout Param: user',user ); 
+        console.log('Layout Param: isAdmin',isAdmin );
+        console.log('Layout Param: icons', icons);
+
+        if(isAdmin){
+          menuItems.push(
+            {
+              key: 'sentry-link',
+              icon: "https://raw.githubusercontent.com/MaciejLabedzkiCodewave/plugin-001/main/images/flotiqBadgeLogo.svg",
+              title: "Sentry",
+              link: 'https://sentry.dev.cdwv.pl/organizations/cdwv/issues/',
+              target: '_blank',
+              rel: 'noreferer',
+              className: undefined, 
+            }
+          )
+        }
+
+        menuItems.push({
+          key: 'flotiq-page-manu-item',
+          iconSrc: "https://raw.githubusercontent.com/MaciejLabedzkiCodewave/plugin-001/main/images/flotiqBadgeLogo.svg",
+          title: 'Flotiq Page',
+          link: 'https://flotiq.com/',
+          target: '_blank',
+          rel: 'noreferer',
+          className: undefined, 
+        })
+
+          
+        return menuItems;
+      },
+    );
+  },
+);
