@@ -3,7 +3,7 @@ FlotiqPlugins.add(
     id: 'PluginsML.layout-sidebar-menu-item',
     displayName: `Layout menu link`,
     description: "Add additional menu item in layout sidebar",
-    version: `1.0.23`, 
+    version: `1.0.24`, 
   },
   function (handler) {
     handler.on(
