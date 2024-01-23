@@ -3,7 +3,7 @@ FlotiqPlugins.add(
     id: 'PluginsML.layout-sidebar-menu-item',
     displayName: `Layout menu link`,
     description: "Add additional menu item in layout sidebar",
-    version: `1.0.23`, 
+    version: `1.0.22`, 
   },
   function (handler) {
     handler.on(
@@ -21,6 +21,7 @@ FlotiqPlugins.add(
               link: 'https://sentry.dev.cdwv.pl/organizations/cdwv/issues/',
               target: '_blank',
               rel: 'noreferer',
+              className: undefined, 
             }
           )
         }
@@ -32,6 +33,7 @@ FlotiqPlugins.add(
           link: 'https://flotiq.com/',
           target: '_blank',
           rel: 'noreferer',
+          className: undefined, 
         })
 
           
