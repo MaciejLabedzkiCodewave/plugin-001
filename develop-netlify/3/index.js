@@ -32,7 +32,7 @@ FlotiqPlugins.add(
                     }
                 ],
                 "description": "Integration with the Netlify. After adding the plugin, you will be able to build your page on Netlify within Flotiq.",
-                "contentTypeDefinitions": finalCtdOptions
+                "contentTypeDefinitions": ""
             }
         },
       );
