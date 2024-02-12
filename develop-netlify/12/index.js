@@ -3,16 +3,14 @@ FlotiqPlugins.add(
       id: 'PluginsML.deploy-netlify',
       displayName: `Deploy Netlify`,
       description: "Integration with Netlify",
-      version: "1.0.11", 
+      version: "1.0.12", 
       repository: "https://raw.githubusercontent.com/MaciejLabedzkiCodewave/plugin-001/main/develop-netlify/1/index.js",
       permissions: []
     },
     function (handler) {
       handler.on(
         'flotiq.plugin.library::add',
-        ({excludes}) => { 
-
-
+        ({exclude}) => {  
           // Validate Parsable String
           function isJsonParsable(str) {
               try {
@@ -24,10 +22,10 @@ FlotiqPlugins.add(
           }
 
           // Case: is plugin excluded  
-          if(typeof excludes === "string" && 
-            excludes?.length > 0 &&
-            isJsonParsable(excludes) &&
-            JSON.parse(excludes)?.includes("Netlify Build")) {
+          if(typeof exclude === "string" && 
+            exclude?.length > 0 &&
+            isJsonParsable(exclude) &&
+            JSON.parse(exclude)?.includes("Netlify Build")) {
             return null;
           }
 
