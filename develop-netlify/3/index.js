@@ -3,13 +3,13 @@ FlotiqPlugins.add(
       id: 'PluginsML.deploy-netlify',
       displayName: `Deploy Netlify`,
       description: "add",
-      version: `1.03`, 
+      version: `1.0.0`, 
     },
     function (handler) {
       handler.on(
         'flotiq.plugin.library::add',
         ({ finalCtdOptions }) => {
-
+          
             return {
                 "type": "netlify-build",
                 "code": "__API_URL__/bundles/netlifybuild/netlify-build/button.html",
@@ -32,7 +32,7 @@ FlotiqPlugins.add(
                     }
                 ],
                 "description": "Integration with the Netlify. After adding the plugin, you will be able to build your page on Netlify within Flotiq.",
-                "contentTypeDefinitions": ""
+                "contentTypeDefinitions": finalCtdOptions
             }
         },
       );
