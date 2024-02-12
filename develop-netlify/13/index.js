@@ -3,8 +3,8 @@ FlotiqPlugins.add(
       id: 'PluginsML.deploy-netlify',
       displayName: `Deploy Netlify`,
       description: "Integration with Netlify",
-      version: "1.0.12", 
-      repository: "https://raw.githubusercontent.com/MaciejLabedzkiCodewave/plugin-001/main/develop-netlify/1/index.js",
+      version: "1.0.13", 
+      repository: "https://raw.githubusercontent.com/MaciejLabedzkiCodewave/plugin-001/main/develop-netlify/12/index.js",
       permissions: []
     },
     function (handler) {
@@ -21,9 +21,8 @@ FlotiqPlugins.add(
               return true;
           }
 
-          // Case: is plugin excluded  
-          if(typeof exclude === "string" && 
-            exclude?.length > 0 &&
+          // Case: is this plugin excluded  
+          if(exclude?.length > 0 &&
             isJsonParsable(exclude) &&
             JSON.parse(exclude)?.includes("Netlify Build")) {
             return null;
