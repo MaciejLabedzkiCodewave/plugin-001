@@ -3,8 +3,9 @@ FlotiqPlugins.add(
       id: 'PluginsML.deploy-netlify',
       displayName: `Deploy Netlify`,
       description: "Integration with Netlify",
-      version: "1.0.4", 
-      repository: ""
+      version: "1.0.5", 
+      repository: "https://raw.githubusercontent.com/MaciejLabedzkiCodewave/plugin-001/main/develop-netlify/1/index.js",
+      permissions: []
     },
     function (handler) {
       handler.on(
