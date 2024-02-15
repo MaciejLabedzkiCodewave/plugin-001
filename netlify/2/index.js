@@ -10,7 +10,24 @@ FlotiqPlugins.add(
     function (handler) {
       handler.on(
         'flotiq.plugin.library::add',
-        () => {  
+        ({exclude}) => {  
+          // Validate Parsable String
+          function isJsonParsable(str) {
+              try {
+                  JSON.parse(str);
+              } catch (e) {
+                  return false;
+              }
+              return true;
+          }
+
+          // Case: is this plugin excluded  
+          if(exclude?.length > 0 &&
+            isJsonParsable(exclude) &&
+            JSON.parse(exclude)?.includes("Netlify Build")) {
+            return null;
+          }
+
           // Case: Netlify Build Settings
           return {
               "type": "netlify-build",
